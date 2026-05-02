@@ -10,7 +10,7 @@ Priority is calculated using a multi-criteria weighting system:
 1.  **Category Weight (Primary):**
     *   **Placement:** Weight 3 (Critical)
     *   **Result:** Weight 2 (High)
-    *   *Event:** Weight 1 (Normal)
+    *   **Event:** Weight 1 (Normal)
 2.  **Recency (Secondary):**
     *   For notifications with the same category weight, the one with the more recent timestamp (`createdAt`) is prioritized.
 
