@@ -18,11 +18,11 @@ Priority is calculated using a multi-criteria weighting system:
 To maintain the top 10 efficiently, we use a **Priority Score** formula:
 $$Score = (Weight \times 10^{13}) + Timestamp_{unix}$$
 
-By multiplying the weight by a factor significantly larger than any current Unix timestamp, we guarantee that any notification in a higher weight category will always outrank a notification in a lower category, regardless of how old or new they are. Within the same category, the higher timestamp (more recent) naturally results in a higher score.
+By multiplying the weight by a factor significantly larger than any current timestamp, any notification that appears more recently within the same category will outrank the older one, for eg : If a newer placement notification comes, it will outrank older ones and be placed at the top, if a newer event notification comes, it will be placed at the top of the events category but not at the top of the entire notfications list.
 
 ### Data Structure & Efficiency
-*   **Current implementation:** For batch processing, we use an $O(M \log M)$ sorting approach.
-*   **Stream Maintenance (Proposed):** To handle a continuous stream of incoming notifications, we would use a **Min-Heap (Priority Queue)** of size 10.
+*   **Current implementation:** For batch processing, an $O(M \log M)$ sorting approach is used.
+*   **Stream Maintenance (Proposed):** To handle a continuous stream of incoming notifications, I would use a **Min-Heap (Priority Queue)** of size 10.
     *   When a new notification arrives:
         1.  Calculate its Priority Score.
         2.  If the heap size < 10, add it.
