@@ -1,0 +1,53 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.notification-header {
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.notification-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-left: 6px solid #007bff;
+}
+
+.notification-card.placement { border-left-color: #28a745; }
+.notification-card.event { border-left-color: #ffc107; }
+.notification-card.result { border-left-color: #dc3545; }
+
+.category {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.message {
+  color: #666;
+  line-height: 1.6;
+}
