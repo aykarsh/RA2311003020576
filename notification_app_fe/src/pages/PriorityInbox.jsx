@@ -17,7 +17,7 @@ const PriorityInbox = () => {
             setError(null);
             try {
                 // Fetching a large set to sort them manually as per Stage 1 requirements
-                const data = await getNotifications({ limit: 100 });
+                const data = await getNotifications({ limit: 10 });
                 const sorted = sortNotificationsByPriority(data.notifications || []);
                 setNotifications(sorted.slice(0, limit));
             } catch (err) {

@@ -13,7 +13,7 @@ const NotificationList = ({ notifications, readIds, onRead, loading }) => {
     );
   }
 
-  if (!notifications || notifications.length === 0) {
+  if (!notifications || notifications.length === 0 || notifications === undefined) {
     return (
       <Box sx={{ textAlign: 'center', py: 5 }}>
         <Typography color="text.secondary">No notifications found.</Typography>
@@ -36,3 +36,5 @@ const NotificationList = ({ notifications, readIds, onRead, loading }) => {
 };
 
 export default NotificationList;
+
+// Debug: notifications: {JSON.stringify(notifications)}

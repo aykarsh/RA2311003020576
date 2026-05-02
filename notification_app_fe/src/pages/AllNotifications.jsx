@@ -19,8 +19,10 @@ const AllNotifications = () => {
             setError(null);
             try {
                 const data = await getNotifications({ limit, page, notification_type: filter || undefined });
+                console.log("AllNotifications Fetched:", data);
                 setNotifications(data.notifications || []);
             } catch (err) {
+                console.error("Fetch Error:", err);
                 setError("Failed to load notifications. Please check your connection.");
             } finally {
                 setLoading(false);
