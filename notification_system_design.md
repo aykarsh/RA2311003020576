@@ -37,3 +37,12 @@ Since $N$ (the number of displayed notifications) is typically small (10, 20, 50
 The following screenshot demonstrates the prioritized notifications fetched from the API, showing the top 10 arranged by category (Placement > Result > Event) and recency:
 
 ![Stage 1 Priority Output](./notification_app_fe/public/Stage1Output.png)
+
+
+## Status Update: Stage 2 Implemented
+- React/MUI Integration: **Complete**
+- Context API for Read/Unread: **Complete**
+- Priority Inbox (Top N): **Complete**
+- Data Fetching & Token Update: **Complete** (Updated to latest token)
+- Design Specs: Using Port 3000 for Frontend, Port 5000 for Backend.
+
