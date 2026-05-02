@@ -1,3 +1,4 @@
+import Log from './logger';
 import axios from "axios";
 
 const API_BASE_URL = "/api-proxy/notifications";
@@ -30,7 +31,7 @@ export const getNotifications = async (params = {}) => {
     }
     return { notifications: [] };
   } catch (error) {
-    console.error("API Request Failed:", error.response ? JSON.stringify(error.response.data) : error.message);
+    Log("frontend", "error", "api", error.message);
     throw error;
   }
 };

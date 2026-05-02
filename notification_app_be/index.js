@@ -1,3 +1,4 @@
+const Log = require('../logging_middleware/logger');
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
@@ -27,9 +28,10 @@ const notifications = [
 ];
 
 app.get('/api/notifications', (req, res) => {
-    res.json(notifications);
+    Log('backend', 'info', 'route', 'Fetched notifications list'); res.json(notifications);
 });
 
 app.listen(PORT, () => {
     console.log(`Backend server running on port ${PORT}`);
 });
+

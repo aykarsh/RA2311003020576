@@ -46,3 +46,10 @@ The following screenshot demonstrates the prioritized notifications fetched from
 - Data Fetching & Token Update: **Complete** (Updated to latest token)
 - Design Specs: Using Port 3000 for Frontend, Port 5000 for Backend.
 
+
+
+## Logging Middleware Integrated
+- Reusable \Log(stack, level, package, message)\ function implemented.
+- Integrated into Frontend (API calls) and Backend (Routes/Startup).
+- Constraints followed: Lowercase fields, Protected API endpoint.
+
