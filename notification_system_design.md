@@ -32,3 +32,8 @@ By multiplying the weight by a factor significantly larger than any current Unix
 
 ### Scalability
 Since $N$ (the number of displayed notifications) is typically small (10, 20, 50), the heap-based approach fits entirely in memory and is extremely fast, making it suitable for high-frequency notification streams.
+
+### Priority Inbox Output
+The following screenshot demonstrates the prioritized notifications fetched from the API, showing the top 10 arranged by category (Placement > Result > Event) and recency:
+
+![Stage 1 Priority Output](./notification_app_fe/public/Stage1Output.png)
